@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from '../containers/Layout';
-import Login from '../containers/Login';
+import NewPassword from '../containers/NewPassword';
 import RecoveryPassword from '../containers/RecoveryPassword';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
@@ -13,7 +13,7 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/new-password' element={<NewPassword />} />
           <Route path='/recovery-password' element={<RecoveryPassword />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
