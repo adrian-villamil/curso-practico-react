@@ -3,7 +3,7 @@ import '@styles/MobileMenu.scss';
 
 const MobileMenu = () => {
   return (
-    <div class="mobile-menu">
+    <div className="mobile-menu">
       <div>
         <ul>
           <li><a href="/">CATEGORIES</a></li>
@@ -20,8 +20,8 @@ const MobileMenu = () => {
         </ul>
       </div>
       <ul>
-        <li><a href="/" class="email">platzi@example.com</a></li>
-        <li><a href="/" class="sign-out">Sign out</a></li>
+        <li><a href="/" className="email">platzi@example.com</a></li>
+        <li><a href="/" className="sign-out">Sign out</a></li>
       </ul>
     </div>
   );
