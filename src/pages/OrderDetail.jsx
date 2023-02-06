@@ -1,6 +1,6 @@
 import React from "react";
 import '@styles/OrderDetail.scss';
-import ShoppingCartItem from "../components/ShoppingCartItem";
+import OrderDetailItem from "../components/OrderDetailItem";
 
 const OrderDetail = () => {
   return (
@@ -15,10 +15,10 @@ const OrderDetail = () => {
             </p>
             <p>$560.00</p>
           </div>
-          <ShoppingCartItem />
-          <ShoppingCartItem />
-          <ShoppingCartItem />
-          <ShoppingCartItem />
+          <OrderDetailItem />
+          <OrderDetailItem />
+          <OrderDetailItem />
+          <OrderDetailItem />
         </div>
       </div>
     </div>
