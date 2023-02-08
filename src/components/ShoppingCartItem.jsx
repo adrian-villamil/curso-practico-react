@@ -2,14 +2,14 @@ import React from "react";
 import '@styles/ShoppingCartItem.scss';
 import icon_close from '@icons/icon_close.png';
 
-const ShoppingCartItem = () => {
+const ShoppingCartItem = ({ product }) => {
   return (
     <div className="shopping-cart-item">
       <figure>
-        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" />
+        <img src={product.images[0]} alt={product.title} />
       </figure>
-      <p>Bike</p>
-      <p>$30,00</p>
+      <p>{product.title}</p>
+      <p>${product.price},00</p>
       <img src={icon_close} alt="close" />
     </div>
   );
