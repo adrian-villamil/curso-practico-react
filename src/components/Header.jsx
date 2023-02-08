@@ -4,14 +4,20 @@ import icon_menu from '@icons/icon_menu.svg';
 import logo_yard_sale from '@logos/logo_yard_sale.svg';
 import icon_shopping_cart from '@icons/icon_shopping_cart.svg';
 import DesktopMenu from '@components/DesktopMenu';
+import ShoppingCart from '../containers/ShoppingCart';
 import AppContext from '../context/AppContext';
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggleDestopMenu, setToggleDesktopMenu] = useState(false);
+  const [toggleShoppingCart, setToggleShoppingCart] = useState(false);
   const { state } = useContext(AppContext);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const handleToggleDestopMenu = () => {
+    setToggleDesktopMenu(!toggleDestopMenu);
+  };
+
+  const handleToggleShoppingCart = () => {
+    setToggleShoppingCart(!toggleShoppingCart);
   };
 
   return (
@@ -42,16 +48,17 @@ const Header = () => {
       </div>
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email" onClick={handleToggle}>
+          <li className="navbar-email" onClick={handleToggleDestopMenu}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart">
+          <li className="navbar-shopping-cart" onClick={handleToggleShoppingCart}>
             <img src={icon_shopping_cart} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
-      {toggle && <DesktopMenu />}
+      {toggleDestopMenu && <DesktopMenu />}
+      {toggleShoppingCart && <ShoppingCart />}
     </nav>
   );
 }
