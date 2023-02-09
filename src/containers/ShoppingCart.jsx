@@ -3,6 +3,7 @@ import '@styles/ShoppingCart.scss';
 import flechita from '@icons/flechita.svg';
 import ShoppingCartItem from "../components/ShoppingCartItem";
 import AppContext from "../context/AppContext";
+import { v4 as uuidv4 } from "uuid";
 
 const ShoppingCart = () => {
   const { state } = useContext(AppContext);
@@ -21,7 +22,7 @@ const ShoppingCart = () => {
       </div>
       <div className="shopping-cart-content">
         {state.cart.map(product => (
-          <ShoppingCartItem key={`shoppingCartItem-${product.id}`} product={product} />
+          <ShoppingCartItem key={uuidv4()} product={product} />
         ))}
         <div className="shopping-cart-info">
           <p>
